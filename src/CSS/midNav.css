@@ -26,7 +26,7 @@ body {
 }
 
 #parentMN {
-    width: 1000px;
+    width: 100%;
     display: flex;
     justify-content: left;
     padding-top: 6px;
@@ -256,10 +256,12 @@ sub>svg {
     flex-direction: column;
 
 }
-#bgColor{
+
+#bgColor {
     display: flex;
     width: 100%;
 }
+
 #mnBGC {
     display: none;
     flex-direction: column;
@@ -346,17 +348,15 @@ sub>svg {
 }
 
 @media (min-width: 1200px) {
-    hr {
-        border: 1px solid grey;
-        /* Set a visible border */
-        margin: 10px 0;
-        /* Add spacing around the line */
-        width: 100%;
-        ;
-        /* Ensure it spans across the container */
+    #parentMN {
+        width: 1000px;
     }
 
-    #mnBGC {}
+    hr {
+        border: 1px solid grey;
+        margin: 10px 0;
+        width: 100%;
+    }
 
     #fPrMNdetails {
         width: 100%;
