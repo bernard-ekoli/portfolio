@@ -1,0 +1,400 @@
+/* Ensure padding is included in width calculations */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Flex container for layout */
+#supDiv {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#line {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 7px;
+    padding-right: 7px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.233);
+    align-items: center;
+}
+
+#parentMN {
+    width: 1000px;
+    display: flex;
+    justify-content: left;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    gap: 16px;
+}
+
+#parentMN>div {
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    font-weight: 600;
+    transition: 0.2s;
+    flex-shrink: 1;
+    /* Prevents overflow */
+}
+
+#parentMN>div:active {
+    transition: 0.2s;
+    background-color: rgba(123, 123, 253, 0.384);
+}
+
+#projects {
+    display: flex;
+    width: 100%;
+    border-top: 3px solid rgba(128, 128, 128, 0.411);
+    padding-top: 20px;
+}
+
+#projectOne {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+#upperProjectOne {
+    display: flex;
+    position: relative;
+}
+
+#leftUpo {
+    display: flex;
+    overflow: hidden;
+    flex-grow: 1;
+    width: 100%;
+    flex-direction: row;
+    padding-left: 12px;
+}
+
+#leftCUpo {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#imCu {
+    text-align: center;
+    overflow: hidden;
+    width: 50px;
+    padding-right: 10px;
+}
+
+#imCu>img {
+    cursor: pointer;
+    width: 33px;
+    border-radius: 50%;
+    max-width: 100%;
+    /* Prevents image overflow */
+}
+
+#nmCu {
+    display: flex;
+    flex-direction: column;
+}
+
+#postName {
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+}
+
+#postFollow {
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    color: blue;
+}
+
+#otherUpo {
+    cursor: pointer;
+    position: absolute;
+    font-weight: 900;
+    top: 5px;
+    right: 7%;
+    max-width: calc(100% - 14px);
+    /* Adjusted to ensure it doesn't overflow */
+}
+
+#commentProject {
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+sub {
+    color: rgba(0, 0, 0, 0.534);
+    display: block;
+}
+
+sub>svg {
+    margin-left: 10px;
+}
+
+#projectImage {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 18px;
+}
+
+#projectImage>img {
+    cursor: pointer;
+    width: 100%;
+    max-width: 500px;
+    /* Prevents image overflow */
+}
+
+#projectReactionsButton {
+    display: flex;
+    background-color: white;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+#projectReactionsButton>div {
+    cursor: pointer;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#projectReactionsButton>div>img {
+    width: 25px;
+    margin-right: 10px;
+}
+
+#pRmndetails {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1000px;
+    gap: 20px;
+}
+
+#fPrMNdetails {
+    display: none;
+    overflow: hidden;
+}
+
+#fPrMNdetails>span {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#infoDiv {
+    width: 100%;
+    overflow: hidden;
+}
+
+#infoDiv>div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    overflow: hidden;
+}
+
+#imgDiv {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 25px;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+#imgDiv>img {
+    width: 100%;
+}
+
+#textsDiv {
+    width: 100%;
+    padding-left: 10px;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    gap: 10px;
+}
+
+#textsDiv>div {
+    display: flex;
+    width: 100%;
+    max-width: 25px;
+    overflow: hidden;
+    padding-left: 10px;
+    ;
+}
+
+#textsDiv>div>img {
+    width: 100%;
+}
+
+/* midNav.css */
+#mnDetails {
+    display: flex;
+    /* Default state, hidden */
+    width: 100%;
+    flex-direction: column;
+
+}
+#bgColor{
+    display: flex;
+    width: 100%;
+}
+#mnBGC {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    max-width: none;
+    align-items: center;
+    background-color: rgba(128, 128, 128, 0.137);
+}
+
+
+#mnBGC.show {
+    display: flex;
+    /* or block, or whatever layout you need */
+}
+
+#aboutDetails {
+    display: none;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+#aboutDetails span {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+#aboutDetails p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#aboutDetails ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#aboutDetails ul li {
+    margin-bottom: 10px;
+}
+
+#aboutDetails ul li b {
+    color: #007bff;
+}
+
+#aboutDetails .special {
+    color: #007bff;
+    font-weight: bold;
+}
+
+#aboutDetails #addition {
+    margin-top: 20px;
+    font-style: italic;
+}
+
+#aboutDetails.aboutTog {
+    display: flex;
+}
+
+#firstMN.border {
+    border-radius: 0px;
+    border-bottom: #007bff 2px solid;
+    color: #007bff;
+}
+
+#secondMN.border {
+    border-radius: 0px;
+    border-bottom: #007bff 2px solid;
+    color: #007bff;
+}
+
+#thirdMN.border {
+    border-radius: 0px;
+    border-bottom: #007bff 2px solid;
+    color: #007bff;
+}
+
+@media (min-width: 1200px) {
+    hr {
+        border: 1px solid grey;
+        /* Set a visible border */
+        margin: 10px 0;
+        /* Add spacing around the line */
+        width: 100%;
+        ;
+        /* Ensure it spans across the container */
+    }
+
+    #mnBGC {}
+
+    #fPrMNdetails {
+        width: 100%;
+        max-width: 400px;
+        flex-grow: 1;
+        padding-left: 20px;
+        padding-right: 20px;
+        display: flex;
+        text-wrap: wrap;
+        background-color: white;
+        height: fit-content;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px gray;
+    }
+
+    #fPrMNdetails>span {
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    #pRmndetails {
+        padding-top: 20px;
+        flex-direction: row;
+    }
+
+    #mnDetails {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px gray;
+        display: flex;
+        height: 100%;
+        max-height: 100vh;
+        overflow-y: scroll;
+    }
+}
