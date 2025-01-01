@@ -60,12 +60,12 @@ const Upper = ({ scrollDown, secondNavDiv }) => {
                             Message
                         </div>
                         <div>...</div>
-                        </div>
                     </div>
                 </div>
-                <MidNav elementRef={elementRef} secondNavDiv={secondNavDiv} />
             </div>
-            );
+            <MidNav elementRef={elementRef} secondNavDiv={secondNavDiv} />
+        </div>
+    );
 }
 
-            export default Upper;
+export default Upper;

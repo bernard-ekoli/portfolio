@@ -1,10 +1,7 @@
-import React from 'react';
 import emailjs from 'emailjs-com';
-import './CSS/contact.css'
+import './CSS/contact.css';
 
 const Contact = ({ contacVs }) => {
-
-
     const sendEmail = (e) => {
         e.preventDefault();
 
@@ -60,7 +57,9 @@ const Contact = ({ contacVs }) => {
                     ></textarea>
                     <br></br>
 
-                    <button type="submit">Send</button>
+                    <button type="submit">
+                        Send
+                    </button>
                 </form>
             </div>
         </div>

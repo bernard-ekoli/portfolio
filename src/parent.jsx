@@ -1,6 +1,10 @@
 import NavBar from "./headBar";
+import React, { useEffect } from 'react';
+import './CSS/contact.css';
 
 const Parent = () => {
+    useEffect(() => {
+    }, []);
     let scrollDown = () => {
         let parent = document.getElementById('parent');
         parent.scrollTo({
@@ -19,7 +23,6 @@ const Parent = () => {
             }}
         >
             <NavBar scrollDown={scrollDown} />
-            {/* Add content to make it scrollable */}
         </div>
     );
 };

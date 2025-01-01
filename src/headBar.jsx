@@ -13,7 +13,7 @@ const NavBar = ({ scrollDown }) => {
                     <span>Message Me</span>
                 </div>
             </div>
-            <Upper scrollDown={scrollDown} secondNavDiv = {secondNavDiv} />
+            <Upper scrollDown={scrollDown} secondNavDiv={secondNavDiv} />
         </>
     );
 }
