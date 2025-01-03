@@ -120,6 +120,9 @@ const MidNav = ({ elementRef, secondNavDiv }) => {
                                                 <span dangerouslySetInnerHTML={{ __html: project.Description }}></span>
                                                 <br />
                                                 <br />
+                                                <a href={project.Download} target="_blank" rel="noopener noreferrer">Download Code</a>
+                                                <br />
+                                                <br />
                                                 <a href={project.Link} target="_blank" rel="noopener noreferrer">View Live</a>
                                             </div>
                                             <div id="projectImage">
