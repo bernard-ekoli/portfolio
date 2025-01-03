@@ -35,8 +35,9 @@ export const projects = [
         Link: 'https://weather.bernardekoli.xyz/'
     },
     {
-        Name: 'Palindrome Checker',
-        Description: 'A palindrome checker created using React. click the link below to view the live app',
+        Name: 'Website Ping Checker',
+        Description: 'A website ping checker created using React. click the link below to view the live app',
         Image: benImg,
+        Link: 'https://ping.bernardekoli.xyz/'
     }
 ]
