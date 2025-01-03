@@ -1,9 +1,11 @@
 import './CSS/upperDiv.css'
-import ben from './assets/images/ben.jpeg'
+import ben from './assets/images/benlogo.png'
 import verified from './assets/icons/verified.png'
 import MidNav from './midNav'
-import { useRef } from 'react'
-const Upper = ({ scrollDown, secondNavDiv }) => {
+import { useRef, useContext } from 'react'
+import { GlobalContext } from './parent'
+const Upper = ({ secondNavDiv }) => {
+    const { scrollDown } = useContext(GlobalContext);
     let elementRef = useRef(null)
     return (
         <div id='upperDivBoss'>

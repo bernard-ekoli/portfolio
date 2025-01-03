@@ -1,8 +1,11 @@
 import './CSS/headBar.css'
-import { useRef } from 'react';
 import Upper from './upperDiv'
-const NavBar = ({ scrollDown }) => {
-    let secondNavDiv = useRef(null)
+import React, { useContext, useRef } from 'react';
+import { GlobalContext } from './parent';
+
+const NavBar = () => {
+    const { scrollDown } = useContext(GlobalContext);
+    const secondNavDiv = useRef(null);
     return (
         <>
             <div id="NavBar">
@@ -13,7 +16,7 @@ const NavBar = ({ scrollDown }) => {
                     <span>Message Me</span>
                 </div>
             </div>
-            <Upper scrollDown={scrollDown} secondNavDiv={secondNavDiv} />
+            <Upper secondNavDiv={secondNavDiv}/>
         </>
     );
 }

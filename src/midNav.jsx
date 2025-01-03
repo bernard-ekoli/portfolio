@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import like from './assets/icons/thumbsUp.svg';
 import comment from './assets/icons/comment.png';
 import whatsapp from './assets/icons/whatsapp.png';
-import benImg from './assets/images/ben.jpeg';
+import benImg from './assets/images/benlogo.png'
 import Contact from './contact';
 import alert from './assets/icons/alert.svg'
 import globe from './assets/icons/globe.svg'
@@ -117,7 +117,8 @@ const MidNav = ({ elementRef, secondNavDiv }) => {
                                                 <div id="otherUpo">. . .</div>
                                             </div>
                                             <div id="commentProject">
-                                                {project.Description}
+                                                <span dangerouslySetInnerHTML={{ __html: project.Description }}></span>
+                                                <br />
                                                 <br />
                                                 <a href={project.Link} target="_blank" rel="noopener noreferrer">View Live</a>
                                             </div>
